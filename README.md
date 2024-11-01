@@ -96,20 +96,20 @@ devtools::install_github("WangX-Lab/gdGSE")
 
 ```
 library(gdGSE)
+
 ## Example for "Bulk"
 file_path <- system.file("extdata", "Bulk_example.RData", package = "gdGSE")
 load(file_path)
 ls()
 # [1] "Bulk_condition"  "Bulk_exp_matrix" "Bulk_Signature"  "file_path" 
-
-gdGSE_Score <- gdGSE(Bulk_exp_matrix,Bulk_condition, Bulk_Signature,data_type = "Bulk") #If Users calculate enrichment score in single cell, please change "Bulk" into "SingleCell".
+gdGSE_Score <- gdGSE(Bulk_exp_matrix,Bulk_condition, Bulk_Signature,data_type = "Bulk") #If Users calculate enrichment score in Bulk, please set data_type into "Bulk".
 
 ## Example for "SingleCell"
 file_path <- system.file("extdata", "SingleCell_example.RData", package = "gdGSE")
 load(file_path)
 ls()
 # [1] "file_path"  "SC_condition"  "SC_exp_matrix" "SC_Signature" 
-gdGSE_Score <- gdGSE(SC_exp_matrix,SC_condition, SC_Signature,data_type = "SingleCell")  #If Users calculate enrichment score in Bulk, please change "SingleCell" into "Bulk".
+gdGSE_Score <- gdGSE(SC_exp_matrix,SC_condition, SC_Signature,data_type = "SingleCell")  #If Users calculate enrichment score in SingleCell, please set data_type into "SingleCell".
 ```
 
 &nbsp;
