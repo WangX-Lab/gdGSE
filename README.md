@@ -6,7 +6,7 @@ The gdGSE algorithm processes either bulk or single-cell transcriptomic data, an
 
 # Description
 
-This vignette shows an example of how to use the gdGSE algorithm to calculate the gene signatures or pathways enrichment score in R. gdGSE is an algorithm to enrichment score at bulk or single-cell transcriptomic data. 
+This vignette shows an example of how to use the gdGSE algorithm to calculate the gene signature or pathway enrichment score in R. gdGSE is an algorithm to evaluate gene set enrichment score in bulk or single-cell transcriptomic data. 
 
 &nbsp;
 
