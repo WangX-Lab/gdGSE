@@ -13,8 +13,8 @@ This vignette shows an example of how to use the gdGSE algorithm to calculate th
 # Details
 
 + The function gdGSE()` is used to calculate the gene signatures or pathways enrichment score.
-  + **exp_matrix:** gene expression profiles in tumor and/or normal samples (Bulk RNA-Seq or Single cell  RNA-Seq). **Note**: when reading the input file, please set "row.names=1. **condition**: sample type ("Tumor" or "Normal") in bulk or cell annotation of single cells in "exp_matrix". **Note**: when in bulk, the "State" column are "Normal" and "Tumor". **Signature**: A list  of signatures, for example: the Gene Ontology Biological Process (GOBP) gene sets, cell type-specific signatures or a gene list correlated with interested features .
-  + "data_type" is a character vector indicating the type of data (Bulk RNA-Seq or Single cell  RNA-Seq). 
+  + **exp_matrix:** gene expression profiles in tumor and/or normal samples (Bulk RNA-Seq or Single-cell  RNA-Seq). **Note**: when reading the input file, please set "row.names=1. **condition**: sample type ("Tumor" or "Normal") in bulk or cell annotation of single cells in "exp_matrix". **Note**: when in bulk, the "State" column is "Normal" and "Tumor". **Signature**: A list  of signatures, for example: the Gene Ontology Biological Process (GOBP) gene sets, cell type-specific signatures, or a gene list correlated with interested features.**Note**: The gene name type in the Signature must be consistent with the gene type in the exp_matrix (for example, if the gene type in the exp_matrix is "Entrez Gene ID", then the gene name type in the Signature should also be "Entrez Gene ID"). 
+  + "data_type" is a character vector indicating the type of data (Bulk RNA-Seq or Single-cell  RNA-Seq). 
 
 &nbsp;&nbsp;
 
@@ -44,7 +44,7 @@ load(file_path)
 ls()
 #[1] "Bulk_condition"  "Bulk_exp_matrix" "Bulk_Signature"  "file_path" 
 
-gdGSE_Score <- gdGSE(Bulk_exp_matrix,Bulk_condition, Bulk_Signature,data_type = "Bulk") #If Users calculate enrichment score in single cell, please change "Bulk" into "SingleCell".
+gdGSE_Score <- gdGSE(Bulk_exp_matrix, Bulk_condition, Bulk_Signature,data_type = "Bulk") #If Users calculate enrichment score in single-cell, please change "Bulk" into "SingleCell".
 ```
 
 **Bulk_exp_matrix**
@@ -99,7 +99,7 @@ file_path <- system.file("extdata", "SingleCell_example.RData", package = "gdGSE
 load(file_path)
 ls()
 # [1] "SC_condition"  "SC_exp_matrix" "SC_Signature"  "file_path" 
-gdGSE_Score <- gdGSE(SC_exp_matrix,SC_condition, SC_Signature,data_type = "SingleCell")  #If Users calculate enrichment score in Bulk, please change "SingleCell" into "Bulk".
+gdGSE_Score <- gdGSE(SC_exp_matrix, SC_condition, SC_Signature,data_type = "SingleCell")  #If Users calculate enrichment score in Bulk, please change "SingleCell" into "Bulk".
 ```
 
 **SC_exp_matrix**
