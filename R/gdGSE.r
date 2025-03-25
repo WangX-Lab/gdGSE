@@ -155,17 +155,11 @@ gdGSE <- function(exp_matrix, condition, Signature, data_type) {
       result = cbind(result,y1)   
   # Check if it's single-cell data
   }
-  return(y1)
+  return(result)
  }
 }
 
-# exp_matrix = read.csv("D:/E/Pathway_project/Rpackage/TCGA-CHOL_exp.csv", stringsAsFactors = FALSE, check.names = FALSE,row.names = 1)
-# condition = read.csv("D:/E/Pathway_project/Rpackage/TCGA-CHOL_state.csv", stringsAsFactors = FALSE, check.names = FALSE)
-# Signature = read.csv("D:/E/Pathway_project/Rpackage/Bulk_pathway.csv", stringsAsFactors = FALSE, check.names = FALSE)
 
-# gdGSE_scores <- gdGSE(exp_matrix, condition, Signature)
-# usethis::use_data(exp_matrix, condition, Signature)
-#gdGSE_scores <- gdGSE(exp_matrix, condition, Signature, data_type = "Bulk")
 
 
 
