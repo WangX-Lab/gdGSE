@@ -178,7 +178,7 @@ gdGSE1 <- function(exp_matrix, condition, gene_sets, data_type = "Bulk", n_perm 
     return(p_values)
 }
 
-p_values <- gdGSE1(exp_matrix, condition, gene_sets, data_type = "Bulk", n_perm = 1000) # Larger values of n_perm may significantly increase computation time.
+p_values <- gdGSE1(Bulk_exp_matrix, Bulk_condition, Bulk_Signature, data_type = "Bulk", n_perm = 100) # Larger values of n_perm may significantly increase computation time.
 ```
 
 # Contact
