@@ -144,6 +144,13 @@ SC_Signature[1:5,1:5]
 |  AKR1B10   |  C1QA   | IGKC  |   TM4SF1    |   COL3A1   |
 |    NQO1    | SLC40A1 | IGLC3 |    CLDN5    |   COL1A2   |
 
+**Calculate empirical p-values**
+```R
+library(tidyverse)
+set.seed(123)
+p_values <- gdGSE1(exp_matrix, condition, gene_sets, data_type = "Bulk", n_perm = 1000) # Larger values of n_perm may significantly increase computation time.
+```
+
 # Contact
 
 E-mail any questions to Xiaosheng Wang (xiaosheng.wang@cpu.edu.cn)
