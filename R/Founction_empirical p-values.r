@@ -29,6 +29,6 @@ gdGSE1 <- function(exp_matrix, condition, gene_sets, data_type = "Bulk", n_perm 
 
 # run gdGSE1 founction
 library(tidyverse)
-library(gdGSE)
+# library(gdGSE)
 set.seed(123)
 p_values <- gdGSE1(exp_matrix, condition, gene_sets, data_type = "Bulk", n_perm = 1000) # Larger values of n_perm may significantly increase computation time.
