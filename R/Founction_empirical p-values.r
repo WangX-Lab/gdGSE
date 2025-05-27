@@ -1,5 +1,17 @@
 # After installing the gdGSE R package first, then run the following functions
 # permutations
+#' gdGSE: a novel pathway enrichment evaluation algorithm based on discretization of gene expression values
+#'
+#' @param exp_matrix The expression matrix of the samples or single cells for which enrichment scoring needs to be performed
+#' @param condition The conditions of bulk "Tumor" or "Normal" or cell annotation of single-cell transcriptomes.
+#' @param Signature A list of signatures,for example:the Gene Ontology Biological Process(GOBP) gene sets, cell type-specific signatures or a gene list correlated with interested features.
+#' @param data_type "Bulk" or "SingleCell".
+#' @return Description of the return value.
+#' @export
+#'
+#' @importFrom stats na.omit sd
+#' @export gdGSE
+#'
 gdGSE <- function(exp_matrix, condition, Signature, data_type) {
   if (missing(data_type)) {
     stop("The data_type is lack. The user must select Bulk or SingleCell")
