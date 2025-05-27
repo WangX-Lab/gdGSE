@@ -1,3 +1,4 @@
+# After installing the gdGSE R package first, then run the following functions
 # permutations
 gdGSE1 <- function(exp_matrix, condition, gene_sets, data_type = "Bulk", n_perm = 1000) {
   
@@ -28,7 +29,7 @@ gdGSE1 <- function(exp_matrix, condition, gene_sets, data_type = "Bulk", n_perm 
 }
 
 # run gdGSE1 founction
+# library(gdGSE) 
 library(tidyverse)
-# library(gdGSE)
 set.seed(123)
 p_values <- gdGSE1(exp_matrix, condition, gene_sets, data_type = "Bulk", n_perm = 1000) # Larger values of n_perm may significantly increase computation time.
